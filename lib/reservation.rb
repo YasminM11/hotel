@@ -13,4 +13,4 @@ module Hotel
       return total_cost
     end 
   end 
-end 
+end

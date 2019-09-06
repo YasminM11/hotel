@@ -25,7 +25,7 @@ describe "reservation" do
   end
 end
 
-#   it "each reservation has a room"
-#   expect(reservation).must_respond_to :room
+#   it "each reservation has a room" do
+#   expect(@reservation).must_respond_to :room
 #   end
 # end

@@ -14,16 +14,12 @@ module Hotel
       total_days = end_date - start_date 
       return total_days
     end 
-  end 
 
-  def check_availible_dates(start_date, end_date)
-    new_day = start_date
-    while (start_date < end_date)
-      if @start_date <= new_day && @end_date > new_day
-        return true
+    def overlap?(date_range)
+      if @start_date >= date_range.end_date || date_range.start_date >= @end_date
+        return false
       end
-      new_day += 1
+      return true
     end
-    return false
-  end
+  end 
 end

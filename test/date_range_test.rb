@@ -28,7 +28,7 @@ describe "date_range" do
     }.must_raise ArgumentError
   end
   
-  it "number_days returns the correct number of days" do
+  it "number days returns the correct number of days" do
     # Arrange
     start_date = Date.new(2001,2,3)
     end_date = start_date + 3
@@ -39,4 +39,8 @@ describe "date_range" do
     # Assert
     expect(range.number_of_days).must_equal 3 
   end
+
+  # it "check available dates returns available days" do
+    
+  # end
 end
