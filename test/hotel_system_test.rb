@@ -61,4 +61,11 @@ describe "hotel_system" do
     expect(@hotel_system.make_reservation(@date_range)[0].date_range).must_equal @date_range 
     expect(@hotel_system.list_reservations(@date_range).length).must_equal 1
   end
+#added by Becca as example
+  it "can make one reservation on the day that another reservation ends" do
+    @hotel_system.make_reservation(@date_range, @cost_per_night)
+    reservation2 = Hotel::DateRange.new(Date.new(2001,2,1),Date.new(2001,2,3))
+    
+    expect(Hotel::HotelSystem.reservations.length).must_equal 2
+  end
 end

@@ -1,4 +1,3 @@
-
 module Hotel
   class HotelSystem
     attr_reader :rooms, :reservations
@@ -44,6 +43,3 @@ module Hotel
     end
   end
 end
-
-
-
